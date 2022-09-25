@@ -1,7 +1,7 @@
 import ContactItem from './item';
 import css from './list.module.css';
 
-function ContactList({ contacts, onDel }) {
+export function ContactList({ contacts, onDel }) {
   return (
     <ul className={css.list}>
       {contacts.map(({ id, name, number }) => (
@@ -12,5 +12,3 @@ function ContactList({ contacts, onDel }) {
     </ul>
   );
 }
-
-export default ContactList;
