@@ -3,13 +3,20 @@ import { MdClose } from 'react-icons/md';
 import { deleteContact } from '../../redux/contactSlice';
 import css from './item.module.css';
 
-export function ContactItem({ contact }) {
+export function ContactItem({ user, tel, delId }) {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(contact.id));
+  const delContacts = data => {
+    dispatch(deleteContact(data));
+  };
+
   return (
     <div className={css.info}>
-      {contact.user}: {contact.tel}
-      <button className={css.btn} type="button" onClick={handleDelete}>
+      {user}: {tel}
+      <button
+        className={css.btn}
+        type="button"
+        onClick={() => delContacts(delId)}
+      >
         <MdClose size={24} />
       </button>
     </div>
