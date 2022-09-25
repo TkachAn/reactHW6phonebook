@@ -1,5 +1,5 @@
 // import { Layout } from 'components/Layout/Layout';
-// import { ContactFilter } from './filter/filter';
+import { Filter } from './filter/filter';
 import { ContactForm } from './contactForm/form';
 import { ContactList } from './contactList/list';
 
@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <>
       <ContactForm />
-      {/* <ContactFilter /> */}
+      <Filter />
       <ContactList />
     </>
   );
