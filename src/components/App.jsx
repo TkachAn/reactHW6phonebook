@@ -1,7 +1,7 @@
-import { Layout } from 'components/Layout/Layout';
-import { AppBar } from 'components/AppBar/AppBar';
-import { TaskForm } from 'components/TaskForm/TaskForm';
-import { TaskList } from 'components/TaskList/TaskList';
+// import { Layout } from 'components/Layout/Layout';
+import { ContactFilter } from './filter/filter';
+import { ContactForm } from './contact/form';
+import { ContactList } from './contact/list';
 
 export const App = () => {
   return (
