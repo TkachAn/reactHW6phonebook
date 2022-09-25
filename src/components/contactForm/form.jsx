@@ -1,38 +1,37 @@
-import { nanoid } from '@reduxjs/toolkit';
 import { useState } from 'react';
-import css from './form.module.css';
+import { nanoid } from '@reduxjs/toolkit';
+import { addContact } from '../../redux/actions';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactSlice/contactSlice';
-
+import css from './form.module.css';
 export function ContactForm() {
-  //onSubmit
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const dispatch = useDispatch();
-
+  /** */
   const handleChange = e => {
     const { name, value } = e.currentTarget;
     if (name === 'name') setName(value);
     if (name === 'number') setNumber(value);
   };
+
+  const dispatch = useDispatch();
+
+  const formSubmit = data => {
+    dispatch(addContact(data));
+  };
+
   /** */
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
+  const handleSubmit = evt => {
+    evt.preventDefault();
     const data = {
       id: nanoid(),
       name,
       number,
     };
     formSubmit(data);
-    form.reset();
+    setName('');
+    setNumber('');
   };
   /** */
-
-  const formSubmit = data => {
-    dispatch(addContact(data));
-  };
-
   return (
     <form className={css.form} onSubmit={handleSubmit}>
       <label className={css.label}>
