@@ -3,6 +3,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addContact } from '../../redux/actions';
 import { useDispatch } from 'react-redux';
 import css from './form.module.css';
+
 export function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -20,8 +21,8 @@ export function ContactForm() {
   };
 
   /** */
-  const handleSubmit = evt => {
-    evt.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
     const data = {
       id: nanoid(),
       name,
