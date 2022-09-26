@@ -5,11 +5,13 @@ import css from './list.module.css';
 
 export function ContactList() {
   const dispatch = useDispatch();
+
   const contacts = useSelector(state =>
     state.contactsReducer.items.filter(contact =>
       contact.name.toLowerCase().includes(state.contactsReducer.filter)
     )
   );
+
   const delContacts = data => {
     dispatch(deleteContact(data));
   };
