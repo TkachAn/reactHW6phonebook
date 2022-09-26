@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { MdClose } from 'react-icons/md';
 import { deleteContact } from '../../redux/actions.js';
+
 import css from './list.module.css';
 
 export function ContactList() {
