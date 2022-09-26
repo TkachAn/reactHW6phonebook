@@ -1,10 +1,8 @@
-import { deleteContact } from '../../redux/actions.js';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux'; //, useDispatch
-// import { ContactItem } from '../contactItem/item';
-import css from './list.module.css';
-// import { getContacts } from '../../redux/selectors';
+import { useDispatch, useSelector } from 'react-redux';
 import { MdClose } from 'react-icons/md';
+import { deleteContact } from '../../redux/actions.js';
+import css from './list.module.css';
+
 export function ContactList() {
   const dispatch = useDispatch();
   const contacts = useSelector(state =>
@@ -30,9 +28,9 @@ export function ContactList() {
               <MdClose size={24} />
             </button>
           </div>
-          {/* <ContactItem user={name} tel={number} delId={id} /> */}
         </li>
       ))}
     </ul>
   );
 }
+/* <ContactItem user={name} tel={number} delId={id} /> */
