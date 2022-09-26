@@ -32,3 +32,4 @@ export const contactsReducer = createReducer(
     },
   }
 );
+console.log('RRRcontacts.length', loadFromStorage('phonebook'));
