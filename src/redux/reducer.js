@@ -3,7 +3,7 @@ import { addContact, deleteContact, filterContact } from './actions.js';
 import {
   loadFromStorage,
   saveInStorage,
-} from '../components/storageService/storageService';
+} from '../storageService/storageService';
 
 export const contactsReducer = createReducer(
   {
@@ -32,4 +32,3 @@ export const contactsReducer = createReducer(
     },
   }
 );
-console.log('RRRcontacts.length', loadFromStorage('phonebook'));
