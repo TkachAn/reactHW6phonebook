@@ -6,7 +6,7 @@
 .label {
   display: block;
   margin-bottom: 20px;
-  color: var(--accentColor); /*var(--secondaryTextColor);*/
+  color: #48b6b9; /*var(--secondaryTextColor);*/
   font-weight: 500;
   font-size: 20px;
 }
@@ -21,7 +21,7 @@
 }
 
 .input:focus {
-  outline-color: var(--accentColor);
+  outline-color: #48b6b9;
 }
 
 .btn {
@@ -33,7 +33,7 @@
   opacity: 0.8;
   /* transition: opacity 250ms var(--timingFn); */
   cursor: pointer;
-  color: var(--accentColor);
+  color: #48b6b9;
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
@@ -41,7 +41,7 @@
 }
 
 .btn:hover {
-  background-color: var(--accentColor);
+  background-color: #48b6b9;
   color: aliceblue;
   opacity: 1;
 }
