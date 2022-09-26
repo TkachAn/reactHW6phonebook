@@ -23,4 +23,5 @@ const deleteFromStorage = key => {
     console.error('Get state error: ', error.message);
   }
 };
-export { saveInStorage, loadFromStorage, deleteFromStorage };
+const contacts = loadFromStorage('phonebook');
+export { saveInStorage, loadFromStorage, deleteFromStorage, contacts };
