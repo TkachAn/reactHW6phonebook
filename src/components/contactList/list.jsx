@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { MdClose } from 'react-icons/md';
 import { deleteContact } from '../../redux/actions.js';
-
+// import { getContacts } from '../../redux/selectors';
 import css from './list.module.css';
 
 export function ContactList() {
   const dispatch = useDispatch();
-
+  // console.log('getContacts', getContacts());
   const contacts = useSelector(state =>
     state.contactsReducer.items.filter(contact =>
       contact.name.toLowerCase().includes(state.contactsReducer.filter)
